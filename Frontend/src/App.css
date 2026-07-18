@@ -1,0 +1,19 @@
+body{
+    margin:0;
+    background:#f5f5f5;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+}
+
+.main{
+    display:flex;
+    gap:30px;
+}
+
+.foods{
+    flex:1;
+}

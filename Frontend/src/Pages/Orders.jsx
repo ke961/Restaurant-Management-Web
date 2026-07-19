@@ -30,7 +30,7 @@ function Orders({ cart, orders }) {
             <div
               key={order.id}
               style={{
-                border: "1px solid #ccc",
+                border: "1px solid #000000",
                 padding: "20px",
                 marginBottom: "20px",
                 borderRadius: "10px",

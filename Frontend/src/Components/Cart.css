@@ -32,6 +32,24 @@
     margin-left:20px;
 }
 
+
+/* Make all text inside the details section black */
+.details h2{
+    color:#000 !important;
+    margin-bottom:10px;
+}
+
+.details p{
+    color:#000 !important;
+    margin:5px 0;
+}
+
+.details span{
+    color:#000 !important;
+}
+
+
+
 .qty{
     display:flex;
     align-items:center;

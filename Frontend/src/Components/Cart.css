@@ -80,6 +80,9 @@
 .bill{
     text-align:right;
     margin-top:30px;
+    color: #000 !important;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .confirm{

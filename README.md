@@ -6,11 +6,17 @@ Website:[https://restaurant-management-web-git-main-restaurant-management.vercel
 ✨ Features
 
 🏠 Modern landing page
+
 🍔 Interactive food menu
+
 🛒 Add to Cart functionality
+
 ➕ Increase/Decrease item quantity
+
 ❌ Remove items from cart
+
 💰 Automatic bill calculation
+
 ✅ Order confirmation
 📜 Order history page
 📱 Responsive design

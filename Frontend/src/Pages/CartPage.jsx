@@ -35,6 +35,11 @@ function CartPage({ cart, setCart, orders, setOrders }) {
         orders={orders}
         setOrders={setOrders}
       />
+
+      
+
+
+
     </div>
   );
 }

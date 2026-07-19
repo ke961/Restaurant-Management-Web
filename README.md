@@ -4,6 +4,7 @@ A modern and responsive restaurant management web application built with React.j
 Website:[https://restaurant-management-web-git-main-restaurant-management.vercel.app/](https://restaurant-management-web-nine.vercel.app/)
 
 ✨ Features
+
 🏠 Modern landing page
 🍔 Interactive food menu
 🛒 Add to Cart functionality

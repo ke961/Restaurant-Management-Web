@@ -91,9 +91,9 @@ Thank you for ordering.`
 
               <div className="details">
 
-                <h2>{item.name}</h2>
+                <h2 className="item-name">{item.name}</h2>
 
-                <p>Rs {item.price}</p>
+                <p className="item-price">Rs {item.price}</p>
 
                 <div className="qty">
 

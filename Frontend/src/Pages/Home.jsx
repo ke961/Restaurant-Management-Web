@@ -59,6 +59,7 @@
 
 
 
+import { useState } from "react";
 import Navbar from "../Components/Navbar";
 import SearchBar from "../Components/SearchBar";
 import FoodCard from "../Components/FoodCard";
@@ -66,6 +67,8 @@ import "./Home.css";
 import hero from "../assets/Restaurent.jpg";
 
 function Home({ cart, setCart }) {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   const addToCart = (food) => {
     const exist = cart.find((item) => item.id === food.id);
@@ -74,7 +77,7 @@ function Home({ cart, setCart }) {
       setCart(
         cart.map((item) =>
           item.id === food.id
-            ? { ...item, quantity: item.quantity + 1 }
+            ? { ...item, quantity: item.quantity + food.quantity }
             : item
         )
       );
@@ -83,7 +86,6 @@ function Home({ cart, setCart }) {
         ...cart,
         {
           ...food,
-          quantity: 1,
         },
       ]);
     }
@@ -121,8 +123,6 @@ function Home({ cart, setCart }) {
             >
               Explore Menu
             </button>
-
-            
           </div>
         </div>
 
@@ -134,30 +134,39 @@ function Home({ cart, setCart }) {
       {/* Features */}
       <section className="features">
         <div className="box">
-          🍕
+          <span className="box-emoji">🍕</span>
           <h3>Fresh Food</h3>
           <p>Prepared every day with quality ingredients.</p>
         </div>
 
         <div className="box">
-          👨‍🍳
+          <span className="box-emoji">👨‍🍳</span>
           <h3>Professional Chefs</h3>
           <p>Experienced chefs creating memorable meals.</p>
         </div>
 
         <div className="box">
-          🚚
+          <span className="box-emoji">🚚</span>
           <h3>Fast Delivery</h3>
           <p>Hot and fresh food delivered quickly.</p>
         </div>
       </section>
 
-      {/* Search */}
-      <SearchBar />
+      {/* Search & Categories */}
+      <SearchBar
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+      />
 
       {/* Food Menu */}
       <section id="menu-section">
-        <FoodCard addToCart={addToCart} />
+        <FoodCard
+          addToCart={addToCart}
+          searchQuery={searchQuery}
+          selectedCategory={selectedCategory}
+        />
       </section>
     </>
   );

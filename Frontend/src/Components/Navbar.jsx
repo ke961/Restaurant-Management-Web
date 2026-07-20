@@ -52,29 +52,45 @@
 
 
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { FaShoppingBag } from "react-icons/fa";
 import "./Navbar.css";
 
 function Navbar({ cart = [] }) {
+  const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+
   return (
     <nav className="navbar">
-
-      <div className="Logo">
-        <h2>🍽️ Food Paradise</h2>
+      <div className="logo-container">
+        <NavLink to="/" className="logo-link">
+          <span className="logo-emoji">🍽️</span>
+          <span className="logo-text">Food<span className="logo-highlight">Paradise</span></span>
+        </NavLink>
       </div>
 
       <div className="nav-links">
-        <Link to="/">Home</Link>
+        <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+          Home
+        </NavLink>
 
-        <Link to="/menu">Menu</Link>
+        <NavLink to="/menu" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+          Menu
+        </NavLink>
 
-        <Link to="/cart">
-          Cart ({cart.length})
-        </Link>
+        <NavLink to="/orders" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+          Orders
+        </NavLink>
 
-        <Link to="/orders">Orders</Link>
+        <NavLink to="/cart" className={({ isActive }) => isActive ? "nav-link cart-link-btn active" : "nav-link cart-link-btn"}>
+          <div className="cart-icon-wrapper">
+            <FaShoppingBag className="cart-icon" />
+            {totalItems > 0 && (
+              <span className="cart-badge">{totalItems}</span>
+            )}
+          </div>
+          <span className="cart-text">Cart</span>
+        </NavLink>
       </div>
-
     </nav>
   );
 }

@@ -42,11 +42,15 @@
 
 
 
+import { useState } from "react";
 import Navbar from "../Components/Navbar";
+import SearchBar from "../Components/SearchBar";
 import FoodCard from "../Components/FoodCard";
 import "./Menu.css";
 
 function Menu({ cart, setCart }) {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   const addToCart = (food) => {
     const exist = cart.find((item) => item.id === food.id);
@@ -55,7 +59,7 @@ function Menu({ cart, setCart }) {
       setCart(
         cart.map((item) =>
           item.id === food.id
-            ? { ...item, quantity: item.quantity + 1 }
+            ? { ...item, quantity: item.quantity + food.quantity }
             : item
         )
       );
@@ -64,7 +68,6 @@ function Menu({ cart, setCart }) {
         ...cart,
         {
           ...food,
-          quantity: 1,
         },
       ]);
     }
@@ -73,7 +76,24 @@ function Menu({ cart, setCart }) {
   return (
     <div className="menu-page">
       <Navbar cart={cart} />
-      <FoodCard addToCart={addToCart} />
+      
+      <div className="menu-page-header">
+        <h1>Our Exquisite Menu</h1>
+        <p>Hand-crafted culinary creations prepared with fresh, premium ingredients daily.</p>
+      </div>
+
+      <SearchBar
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+      />
+
+      <FoodCard 
+        addToCart={addToCart} 
+        searchQuery={searchQuery}
+        selectedCategory={selectedCategory}
+      />
     </div>
   );
 }

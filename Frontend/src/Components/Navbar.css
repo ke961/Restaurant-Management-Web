@@ -1,84 +1,167 @@
-/* .navbar {
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #ff5722;
-  padding: 15px 40px;
+  padding: 16px 8%;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: var(--transition);
 }
 
-.navbar h2 {
-  color: white;
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-emoji {
+  font-size: 1.8rem;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  letter-spacing: -0.5px;
+}
+
+.logo-highlight {
+  color: var(--primary);
 }
 
 .nav-links {
-  display: flex;.navbar {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 40px;
-    background:#ff6b35;
-    color:white;
-    list-style:none;
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
-.navbar ul{
-    display:flex;
-    list-style:none;
-    gap:30px;
-    
-}
-
-.cartBtn{
-    background:white;
-    color:#ff6b35;
-    border:none;
-    padding:10px 20px;
-    border-radius:8px;
-    cursor:pointer;
-}
-  gap: 20px;
-  list-style:none;
-}
-
-.nav-links a {
+.nav-link {
   text-decoration: none;
-  color: white;
-  font-weight: bold;
-  
-} */
-
-
-
-
-
-
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 8%;
-    background:#111;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 550;
+  position: relative;
+  padding: 6px 0;
+  transition: var(--transition);
 }
 
-.logo h2{
-    color:#fff;
-    margin:0;
+.nav-link:hover {
+  color: var(--primary);
 }
 
-.nav-links{
-    display:flex;
-    gap:35px;      /* This separates the links */
-    align-items:center;
+/* NavLink active underlines */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: var(--transition);
 }
 
-.nav-links a{
-    text-decoration:none;
-    color:white;
-    font-size:18px;
-    font-weight:500;
-    transition:.3s;
+.nav-link.active {
+  color: var(--primary);
 }
 
-.nav-links a:hover{
-    color:#ff5722;
+.nav-link.active::after {
+  width: 100%;
 }
+
+/* Cart Button Specific Styling */
+.cart-link-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-light);
+  color: var(--primary) !important;
+  padding: 8px 16px;
+  border-radius: var(--border-radius-sm);
+  font-weight: 600;
+}
+
+.cart-link-btn:hover {
+  background: var(--primary);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+.cart-link-btn.active {
+  background: var(--primary);
+  color: #ffffff !important;
+}
+
+.cart-link-btn::after {
+  display: none; /* Disable underline for the button button link */
+}
+
+.cart-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-icon {
+  font-size: 1.1rem;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  font-size: 0.7rem;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  border: 2px solid var(--card-bg);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: pulse 1s infinite alternate;
+}
+
+.cart-link-btn:hover .cart-badge {
+  border-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 5%;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .logo-text {
+    font-size: 1.25rem;
+  }
+
+  .cart-text {
+    display: none; /* Hide text, only show bag icon on small screens */
+  }
+
+  .cart-link-btn {
+    padding: 8px 12px;
+  }
+}

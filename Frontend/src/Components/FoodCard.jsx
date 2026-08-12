@@ -429,6 +429,102 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
         { name: "Tempura Vegetable Mix", price: 80 },
         { name: "Extra Tentsuyu Dip", price: 25 }
       ]
+    },
+    {
+      id: 27,
+      name: "Korean Fresh Mango Bingsu",
+      price: 420,
+      image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=800&auto=format&fit=crop",
+      category: "Desserts",
+      rating: 4.9,
+      prepTime: "10 min",
+      description: "Fluffy snowfall shaved milk ice piled high with fresh sweet mango cubes, mango coulis, sweetened condensed milk, and creamy mango gelato.",
+      spiceOption: false,
+      addons: [
+        { name: "Extra Mango Gelato Scoop", price: 70 },
+        { name: "Condensed Milk Drizzle", price: 20 },
+        { name: "Chewy Mochi Bits", price: 30 }
+      ]
+    },
+    {
+      id: 28,
+      name: "Korean Brown Sugar Hotteok",
+      price: 280,
+      image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop",
+      category: "Desserts",
+      rating: 4.8,
+      prepTime: "12 min",
+      description: "Two golden crispy griddled street pancakes stuffed with a molten syrup of brown sugar, cinnamon, nutmeg, and crunchy crushed walnuts.",
+      spiceOption: false,
+      addons: [
+        { name: "Add Honey Drizzle", price: 25 },
+        { name: "Vanilla Bean Ice Cream Side", price: 60 },
+        { name: "Extra Crushed Walnuts", price: 35 }
+      ]
+    },
+    {
+      id: 29,
+      name: "Japanese Mochi Ice Cream Trio",
+      price: 320,
+      image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=800&auto=format&fit=crop",
+      category: "Desserts",
+      rating: 4.9,
+      prepTime: "5 min",
+      description: "Delicate soft rice dough wrapped around premium ice cream centers. Trio of Matcha Green Tea, Mango, and Sweet Strawberry.",
+      spiceOption: false,
+      addons: [
+        { name: "Extra Mochi Piece", price: 90 },
+        { name: "Whipped Cream & Cherry", price: 30 },
+        { name: "Chocolate Drizzle", price: 20 }
+      ]
+    },
+    {
+      id: 30,
+      name: "Classic Italian Tiramisu Cup",
+      price: 390,
+      image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?q=80&w=800&auto=format&fit=crop",
+      category: "Desserts",
+      rating: 4.9,
+      prepTime: "5 min",
+      description: "Authentic Venetian dessert made with espresso-soaked ladyfingers, velvety mascarpone cream, and topped with rich dark cocoa powder.",
+      spiceOption: false,
+      addons: [
+        { name: "Shot of Espresso Drizzle", price: 45 },
+        { name: "Extra Mascarpone Cream", price: 50 },
+        { name: "Dark Chocolate Shavings", price: 30 }
+      ]
+    },
+    {
+      id: 31,
+      name: "Triple Chocolate Lava Cake",
+      price: 350,
+      image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=800&auto=format&fit=crop",
+      category: "Desserts",
+      rating: 4.8,
+      prepTime: "10 min",
+      description: "Warm dark chocolate sponge cake with a rich molten lava core that oozes on first bite. Served with vanilla gelato and fresh mint.",
+      spiceOption: false,
+      addons: [
+        { name: "Vanilla Gelato Scoop", price: 60 },
+        { name: "Warm Chocolate Fudge", price: 40 },
+        { name: "Fresh Strawberries", price: 50 }
+      ]
+    },
+    {
+      id: 32,
+      name: "Thai Coconut Mango Sticky Rice",
+      price: 340,
+      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop",
+      category: "Desserts",
+      rating: 4.9,
+      prepTime: "10 min",
+      description: "Warm sweet glutinous rice cooked in rich salted coconut cream, paired with fresh sliced honey mango and toasted mung beans.",
+      spiceOption: false,
+      addons: [
+        { name: "Extra Sweet Mango Half", price: 80 },
+        { name: "Extra Coconut Sauce Drizzle", price: 25 },
+        { name: "Toasted Sesame Seeds", price: 15 }
+      ]
     }
   ];
 

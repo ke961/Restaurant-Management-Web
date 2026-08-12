@@ -525,6 +525,102 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
         { name: "Extra Coconut Sauce Drizzle", price: 25 },
         { name: "Toasted Sesame Seeds", price: 15 }
       ]
+    },
+    {
+      id: 33,
+      name: "Korean Sweet Banana Milk",
+      price: 220,
+      image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=800&auto=format&fit=crop",
+      category: "Beverages",
+      rating: 4.9,
+      prepTime: "3 min",
+      description: "Iconic Korean sweet creamy banana-infused milk served ice-cold, topped with fresh banana slice and a drizzle of caramel.",
+      spiceOption: false,
+      addons: [
+        { name: "Add Chewy Tapioca Pearls", price: 30 },
+        { name: "Extra Creamy Milk Foam", price: 25 },
+        { name: "Caramel Drizzle", price: 20 }
+      ]
+    },
+    {
+      id: 34,
+      name: "Japanese Ceremonial Iced Matcha Latte",
+      price: 280,
+      image: "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?q=80&w=800&auto=format&fit=crop",
+      category: "Beverages",
+      rating: 4.9,
+      prepTime: "5 min",
+      description: "Whisked Kyoto ceremonial grade Uji matcha layered with organic cold milk, Madagascar vanilla syrup, and a silky cream top.",
+      spiceOption: false,
+      addons: [
+        { name: "Oat Milk Upgrade", price: 50 },
+        { name: "Shot of Espresso (Dirty Matcha)", price: 45 },
+        { name: "Sweet Red Bean Foam", price: 35 }
+      ]
+    },
+    {
+      id: 35,
+      name: "Authentic Thai Iced Milk Tea",
+      price: 240,
+      image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=800&auto=format&fit=crop",
+      category: "Beverages",
+      rating: 4.8,
+      prepTime: "4 min",
+      description: "Traditional aromatic Thai spiced black tea brewed with star anise and cardamom, layered with sweet condensed milk over crushed ice.",
+      spiceOption: false,
+      addons: [
+        { name: "Grass Jelly Topping", price: 30 },
+        { name: "Condensed Milk Extra Swirl", price: 20 },
+        { name: "Boba Pearls", price: 35 }
+      ]
+    },
+    {
+      id: 36,
+      name: "Sparkling Yuzu Peach Fruit Soda",
+      price: 250,
+      image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=800&auto=format&fit=crop",
+      category: "Beverages",
+      rating: 4.8,
+      prepTime: "4 min",
+      description: "Bubbly sparkling soda infused with tangy Japanese yuzu citrus, sweet white peach jam, mint leaves, and a dehydrated citrus wheel.",
+      spiceOption: false,
+      addons: [
+        { name: "Popping Peach Boba", price: 40 },
+        { name: "Extra Yuzu Citrus Shot", price: 30 },
+        { name: "Fresh Mint Sprig", price: 15 }
+      ]
+    },
+    {
+      id: 37,
+      name: "Korean Fresh Strawberry Milk Jelly",
+      price: 270,
+      image: "https://images.unsplash.com/photo-1546173159-315724a31696?q=80&w=800&auto=format&fit=crop",
+      category: "Beverages",
+      rating: 4.9,
+      prepTime: "5 min",
+      description: "Chunky homemade fresh strawberry puree layered with cold whole milk, sweet strawberry syrup, and soft grass jelly bites.",
+      spiceOption: false,
+      addons: [
+        { name: "Extra Strawberry Compote", price: 40 },
+        { name: "Soft Coconut Jelly", price: 30 },
+        { name: "Ice Cream Scoop Topping", price: 60 }
+      ]
+    },
+    {
+      id: 38,
+      name: "Iced Vietnamese Sweet Egg Coffee",
+      price: 290,
+      image: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=800&auto=format&fit=crop",
+      category: "Beverages",
+      rating: 4.9,
+      prepTime: "6 min",
+      description: "Robust dark roasted Vietnamese phin-filtered coffee topped with a thick whipped egg yolk and condensed milk cloud, dusted with cocoa.",
+      spiceOption: false,
+      addons: [
+        { name: "Extra Whipped Egg Foam", price: 45 },
+        { name: "Double Espresso Shot", price: 40 },
+        { name: "Condensed Milk Drizzle", price: 20 }
+      ]
     }
   ];
 

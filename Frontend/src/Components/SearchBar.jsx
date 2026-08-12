@@ -9,6 +9,8 @@ function SearchBar({ searchQuery, setSearchQuery, selectedCategory, setSelectedC
     { id: "Asian", label: "Asian", icon: "🍜" },
     { id: "Korean", label: "Korean", icon: "🥢" },
     { id: "Pan Asian", label: "Pan Asian", icon: "🥟" },
+    { id: "Japanese", label: "Japanese", icon: "🍣" },
+    { id: "Desserts", label: "Desserts", icon: "🍰" },
     { id: "Beverages", label: "Beverages", icon: "🥤" },
   ];
 

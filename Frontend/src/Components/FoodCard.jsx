@@ -22,6 +22,23 @@ import pho from "../assets/Pho.png";
 import trufflePizza from "../assets/Truffle_Pizza.png";
 import bobaTea from "../assets/Boba_Tea.png";
 import sashimiPlatter from "../assets/Sashimi_Platter.png";
+import samgyeopsal from "../assets/Samgyeopsal.jpg";
+import hainaneseChicken from "../assets/Hainanese_Chicken_Rice.jpg";
+import matchaLavaCake from "../assets/Matcha_Lava_Cake.jpg";
+import nyCheesecake from "../assets/NY_Cheesecake.jpg";
+import shrimpTempura from "../assets/Shrimp_Tempura.jpg";
+import mangoBingsu from "../assets/Mango_Bingsu.png";
+import hotteok from "../assets/Hotteok.png";
+import mochiTrio from "../assets/Mochi_Trio.jpg";
+import tiramisu from "../assets/Tiramisu.jpg";
+import chocolateLavaCake from "../assets/Chocolate_Lava_Cake.jpg";
+import mangoStickyRice from "../assets/Mango_Sticky_Rice.jpg";
+import bananaMilk from "../assets/Banana_Milk.jpg";
+import matchaLatte from "../assets/Matcha_Latte.jpg";
+import thaiMilkTea from "../assets/Thai_Milk_Tea.jpg";
+import yuzuSoda from "../assets/Yuzu_Soda.jpg";
+import strawberryMilk from "../assets/Strawberry_Milk.png";
+import vietnameseCoffee from "../assets/Vietnamese_Coffee.jpg";
 
 function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
   const [selectedFood, setSelectedFood] = useState(null);
@@ -354,7 +371,7 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
       id: 22,
       name: "Sizzling Korean Samgyeopsal BBQ",
       price: 780,
-      image: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop",
+      image: samgyeopsal,
       category: "Korean",
       rating: 4.8,
       prepTime: "20 min",
@@ -370,7 +387,7 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
       id: 23,
       name: "Authentic Hainanese Chicken Rice",
       price: 540,
-      image: "https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=800&auto=format&fit=crop",
+      image: hainaneseChicken,
       category: "Pan Asian",
       rating: 4.7,
       prepTime: "15 min",
@@ -386,7 +403,7 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
       id: 24,
       name: "Warm Matcha Green Tea Lava Cake",
       price: 360,
-      image: "https://images.unsplash.com/photo-1617305855058-336d24456869?q=80&w=800&auto=format&fit=crop",
+      image: matchaLavaCake,
       category: "Desserts",
       rating: 4.9,
       prepTime: "12 min",
@@ -402,7 +419,7 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
       id: 25,
       name: "New York Wild Berry Cheesecake",
       price: 380,
-      image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=800&auto=format&fit=crop",
+      image: nyCheesecake,
       category: "Desserts",
       rating: 4.8,
       prepTime: "5 min",
@@ -418,7 +435,7 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
       id: 26,
       name: "Crispy Japanese Shrimp Tempura",
       price: 650,
-      image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=800&auto=format&fit=crop",
+      image: shrimpTempura,
       category: "Japanese",
       rating: 4.8,
       prepTime: "15 min",
@@ -434,7 +451,7 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
       id: 27,
       name: "Korean Fresh Mango Bingsu",
       price: 420,
-      image: "https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?q=80&w=800&auto=format&fit=crop",
+      image: mangoBingsu,
       category: "Desserts",
       rating: 4.9,
       prepTime: "10 min",
@@ -450,7 +467,7 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
       id: 28,
       name: "Korean Brown Sugar Hotteok",
       price: 280,
-      image: "https://images.unsplash.com/photo-1528207776546-365bb710ee93?q=80&w=800&auto=format&fit=crop",
+      image: hotteok,
       category: "Desserts",
       rating: 4.8,
       prepTime: "12 min",
@@ -466,7 +483,7 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
       id: 29,
       name: "Japanese Mochi Ice Cream Trio",
       price: 320,
-      image: "https://images.unsplash.com/photo-1582293041079-7814c22966d7?q=80&w=800&auto=format&fit=crop",
+      image: mochiTrio,
       category: "Desserts",
       rating: 4.9,
       prepTime: "5 min",
@@ -482,7 +499,7 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
       id: 30,
       name: "Classic Italian Tiramisu Cup",
       price: 390,
-      image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?q=80&w=800&auto=format&fit=crop",
+      image: tiramisu,
       category: "Desserts",
       rating: 4.9,
       prepTime: "5 min",
@@ -498,7 +515,7 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
       id: 31,
       name: "Triple Chocolate Lava Cake",
       price: 350,
-      image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=800&auto=format&fit=crop",
+      image: chocolateLavaCake,
       category: "Desserts",
       rating: 4.8,
       prepTime: "10 min",
@@ -514,7 +531,7 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
       id: 32,
       name: "Thai Coconut Mango Sticky Rice",
       price: 340,
-      image: "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?q=80&w=800&auto=format&fit=crop",
+      image: mangoStickyRice,
       category: "Desserts",
       rating: 4.9,
       prepTime: "10 min",
@@ -530,7 +547,7 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
       id: 33,
       name: "Korean Sweet Banana Milk",
       price: 220,
-      image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=800&auto=format&fit=crop",
+      image: bananaMilk,
       category: "Beverages",
       rating: 4.9,
       prepTime: "3 min",
@@ -546,7 +563,7 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
       id: 34,
       name: "Japanese Ceremonial Iced Matcha Latte",
       price: 280,
-      image: "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?q=80&w=800&auto=format&fit=crop",
+      image: matchaLatte,
       category: "Beverages",
       rating: 4.9,
       prepTime: "5 min",
@@ -562,7 +579,7 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
       id: 35,
       name: "Authentic Thai Iced Milk Tea",
       price: 240,
-      image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=800&auto=format&fit=crop",
+      image: thaiMilkTea,
       category: "Beverages",
       rating: 4.8,
       prepTime: "4 min",
@@ -578,7 +595,7 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
       id: 36,
       name: "Sparkling Yuzu Peach Fruit Soda",
       price: 250,
-      image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=800&auto=format&fit=crop",
+      image: yuzuSoda,
       category: "Beverages",
       rating: 4.8,
       prepTime: "4 min",
@@ -594,7 +611,7 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
       id: 37,
       name: "Korean Fresh Strawberry Milk Jelly",
       price: 270,
-      image: "https://images.unsplash.com/photo-1546173159-315724a31696?q=80&w=800&auto=format&fit=crop",
+      image: strawberryMilk,
       category: "Beverages",
       rating: 4.9,
       prepTime: "5 min",
@@ -610,7 +627,7 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
       id: 38,
       name: "Iced Vietnamese Sweet Egg Coffee",
       price: 290,
-      image: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=800&auto=format&fit=crop",
+      image: vietnameseCoffee,
       category: "Beverages",
       rating: 4.9,
       prepTime: "6 min",

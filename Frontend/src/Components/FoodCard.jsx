@@ -21,6 +21,7 @@ import cornDog from "../assets/Corn_Dog.png";
 import pho from "../assets/Pho.png";
 import trufflePizza from "../assets/Truffle_Pizza.png";
 import bobaTea from "../assets/Boba_Tea.png";
+import sashimiPlatter from "../assets/Sashimi_Platter.png";
 
 function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
   const [selectedFood, setSelectedFood] = useState(null);
@@ -332,6 +333,102 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
         { name: "Egg Pudding Layer", price: 40 },
         { name: "Salted Cream Cheese Foam", price: 35 }
       ]
+    },
+    {
+      id: 21,
+      name: "Salmon & Tuna Sashimi Platter",
+      price: 1100,
+      image: sashimiPlatter,
+      category: "Japanese",
+      rating: 4.9,
+      prepTime: "15 min",
+      description: "Master-cut slices of fresh sashimi-grade Norwegian Atlantic salmon and Pacific bluefin tuna, served on ice with shiso leaves, grated wasabi, and pickled ginger.",
+      spiceOption: false,
+      addons: [
+        { name: "Extra Salmon Slices (3 pcs)", price: 280 },
+        { name: "Extra Fresh Wasabi", price: 40 },
+        { name: "Ikura Salmon Roe", price: 180 }
+      ]
+    },
+    {
+      id: 22,
+      name: "Sizzling Korean Samgyeopsal BBQ",
+      price: 780,
+      image: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop",
+      category: "Korean",
+      rating: 4.8,
+      prepTime: "20 min",
+      description: "Thick-cut grilled pork belly served sizzling with garlic cloves, sesame oil dipping sauce, spicy ssamjang paste, grilled kimchi, and crisp lettuce leaves.",
+      spiceOption: true,
+      addons: [
+        { name: "Extra Pork Belly Strip", price: 220 },
+        { name: "Garlic & Chili Ssam Set", price: 50 },
+        { name: "Soybean Paste Stew (Doenjang)", price: 90 }
+      ]
+    },
+    {
+      id: 23,
+      name: "Authentic Hainanese Chicken Rice",
+      price: 540,
+      image: "https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=800&auto=format&fit=crop",
+      category: "Pan Asian",
+      rating: 4.7,
+      prepTime: "15 min",
+      description: "Tender poached chicken served over fragrant jasmine rice infused with chicken stock, ginger, and pandan leaves. Accompanied by homemade chili and garlic-soy sauces.",
+      spiceOption: true,
+      addons: [
+        { name: "Extra Poached Chicken Portion", price: 160 },
+        { name: "Aromatic Chicken Rice Upgrade", price: 40 },
+        { name: "Clear Chicken Broth Bowl", price: 30 }
+      ]
+    },
+    {
+      id: 24,
+      name: "Warm Matcha Green Tea Lava Cake",
+      price: 360,
+      image: "https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=800&auto=format&fit=crop",
+      category: "Desserts",
+      rating: 4.9,
+      prepTime: "12 min",
+      description: "Warm Uji matcha green tea cake with a flowing molten chocolate center, served with a scoop of Madagascar vanilla bean ice cream.",
+      spiceOption: false,
+      addons: [
+        { name: "Extra Vanilla Ice Cream Scoop", price: 60 },
+        { name: "Sweet Azuki Red Bean Paste", price: 40 },
+        { name: "Matcha Powder Drizzle", price: 25 }
+      ]
+    },
+    {
+      id: 25,
+      name: "New York Wild Berry Cheesecake",
+      price: 380,
+      image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=800&auto=format&fit=crop",
+      category: "Desserts",
+      rating: 4.8,
+      prepTime: "5 min",
+      description: "Rich and velvety baked NY cheesecake on a graham cracker crust, drizzled with sweet wild blueberry & raspberry compote.",
+      spiceOption: false,
+      addons: [
+        { name: "Extra Berry Compote", price: 35 },
+        { name: "Whipped Cream Swirl", price: 30 },
+        { name: "Chocolate Fudge Drizzle", price: 35 }
+      ]
+    },
+    {
+      id: 26,
+      name: "Crispy Japanese Shrimp Tempura",
+      price: 650,
+      image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=800&auto=format&fit=crop",
+      category: "Japanese",
+      rating: 4.8,
+      prepTime: "15 min",
+      description: "Five golden jumbo tiger prawns lightly fried in crispy Japanese tempura batter, served with lotus root chips and warm tentsuyu ginger dipping sauce.",
+      spiceOption: false,
+      addons: [
+        { name: "Extra Tempura Prawn (2 pcs)", price: 180 },
+        { name: "Tempura Vegetable Mix", price: 80 },
+        { name: "Extra Tentsuyu Dip", price: 25 }
+      ]
     }
   ];
 
@@ -340,7 +437,7 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
     const matchesCategory =
       selectedCategory === "All" ||
       food.category === selectedCategory ||
-      (selectedCategory === "Asian" && (food.category === "Korean" || food.category === "Pan Asian" || food.category === "Asian"));
+      (selectedCategory === "Asian" && (food.category === "Korean" || food.category === "Pan Asian" || food.category === "Asian" || food.category === "Japanese"));
     const matchesSearch =
       food.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       food.description.toLowerCase().includes(searchQuery.toLowerCase()) ||

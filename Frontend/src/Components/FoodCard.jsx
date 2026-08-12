@@ -514,7 +514,7 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
       id: 32,
       name: "Thai Coconut Mango Sticky Rice",
       price: 340,
-      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1621263764928-df1444c5e859?q=80&w=800&auto=format&fit=crop",
       category: "Desserts",
       rating: 4.9,
       prepTime: "10 min",

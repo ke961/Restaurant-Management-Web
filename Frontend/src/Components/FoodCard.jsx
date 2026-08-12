@@ -9,6 +9,12 @@ import chicken from "../assets/Chicken_Fry.jpg";
 import fish from "../assets/Fish_and_Chips.jpg";
 import drink from "../assets/Cold_Drinks.jpg";
 import pizza from "../assets/Pizza.jpg";
+import koreanFriedChicken from "../assets/Korean_Fried_Chicken.png";
+import bibimbap from "../assets/Bibimbap.png";
+import tteokbokki from "../assets/Tteokbokki.png";
+import dimSum from "../assets/Dim_Sum.png";
+import padThai from "../assets/Pad_Thai.png";
+import kimchiRice from "../assets/Kimchi_Fried_Rice.png";
 
 function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
   const [selectedFood, setSelectedFood] = useState(null);
@@ -129,16 +135,114 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
         { name: "Jalapenos", price: 40 }
       ]
     },
+    {
+      id: 9,
+      name: "Korean Sweet & Spicy Fried Chicken",
+      price: 520,
+      image: koreanFriedChicken,
+      category: "Korean",
+      rating: 4.9,
+      prepTime: "20 min",
+      description: "Double-fried extra crunchy chicken coated in sweet & spicy sticky gochujang glaze, sprinkled with crushed peanuts and toasted sesame seeds.",
+      spiceOption: true,
+      addons: [
+        { name: "Extra Honey Garlic Glaze", price: 35 },
+        { name: "Pickled Radish Cubes", price: 40 },
+        { name: "Crispy Rice Cakes Add-on", price: 60 }
+      ]
+    },
+    {
+      id: 10,
+      name: "Dolsot Beef Bibimbap",
+      price: 550,
+      image: bibimbap,
+      category: "Korean",
+      rating: 4.8,
+      prepTime: "18 min",
+      description: "Sizzling hot rice bowl topped with savory bulgogi beef, sautéed seasonal vegetables, crispy nori, sunny-side egg, and authentic gochujang sauce.",
+      spiceOption: true,
+      addons: [
+        { name: "Extra Bulgogi Beef", price: 120 },
+        { name: "Extra Fried Egg", price: 30 },
+        { name: "Kimchi Side Dish", price: 45 }
+      ]
+    },
+    {
+      id: 11,
+      name: "Cheesy Spicy Tteokbokki",
+      price: 420,
+      image: tteokbokki,
+      category: "Korean",
+      rating: 4.7,
+      prepTime: "15 min",
+      description: "Chewy Korean rice cakes and tender fish cakes simmered in a fiery sweet-and-spicy gochujang chili sauce, topped with melted mozzarella cheese.",
+      spiceOption: true,
+      addons: [
+        { name: "Melted Mozzarella Cheese", price: 50 },
+        { name: "Rabokki Ramen Noodles", price: 60 },
+        { name: "Fried Gimari Dumplings (2 pcs)", price: 70 }
+      ]
+    },
+    {
+      id: 12,
+      name: "Pan-Asian Steamed Dim Sum",
+      price: 480,
+      image: dimSum,
+      category: "Pan Asian",
+      rating: 4.9,
+      prepTime: "15 min",
+      description: "Handcrafted bamboo-steamed dumplings filled with seasoned chicken, minced shrimp, scallions, and ginger. Served with house-made chili oil soy dip.",
+      spiceOption: true,
+      addons: [
+        { name: "Extra Spicy Chili Oil", price: 25 },
+        { name: "Steamed Bao Bun", price: 50 },
+        { name: "Extra Dumplings (2 pcs)", price: 90 }
+      ]
+    },
+    {
+      id: 13,
+      name: "Classic Thai Pad Thai",
+      price: 580,
+      image: padThai,
+      category: "Pan Asian",
+      rating: 4.8,
+      prepTime: "20 min",
+      description: "Wok-tossed rice noodles with succulent jumbo prawns, tofu, scrambled eggs, bean sprouts, crushed roasted peanuts, and fresh lime wedges.",
+      spiceOption: true,
+      addons: [
+        { name: "Extra Jumbo Prawns (2 pcs)", price: 150 },
+        { name: "Extra Roasted Peanuts", price: 25 },
+        { name: "Crispy Wonton Strips", price: 40 }
+      ]
+    },
+    {
+      id: 14,
+      name: "Korean Kimchi Fried Rice",
+      price: 450,
+      image: kimchiRice,
+      category: "Korean",
+      rating: 4.7,
+      prepTime: "15 min",
+      description: "Wok-fried jasmine rice with aged spicy kimchi and pork belly bites, topped with a fried egg, toasted sesame seeds, and crispy roasted seaweed.",
+      spiceOption: true,
+      addons: [
+        { name: "Extra Fried Egg", price: 30 },
+        { name: "Melted Cheese Layer", price: 50 },
+        { name: "Roasted Nori Snack Pack", price: 35 }
+      ]
+    }
   ];
 
   // Filtering Logic
   const filteredFoods = foods.filter((food) => {
     const matchesCategory =
-      selectedCategory === "All" || food.category === selectedCategory;
-    const matchesSearch = food.name
-      .toLowerCase()
-      .includes(searchQuery.toLowerCase()) || 
-      food.description.toLowerCase().includes(searchQuery.toLowerCase());
+      selectedCategory === "All" ||
+      food.category === selectedCategory ||
+      (selectedCategory === "Asian" && (food.category === "Korean" || food.category === "Pan Asian" || food.category === "Asian"));
+    const matchesSearch =
+      food.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      food.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      food.category.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 

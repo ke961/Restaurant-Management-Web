@@ -15,6 +15,12 @@ import tteokbokki from "../assets/Tteokbokki.png";
 import dimSum from "../assets/Dim_Sum.png";
 import padThai from "../assets/Pad_Thai.png";
 import kimchiRice from "../assets/Kimchi_Fried_Rice.png";
+import galbi from "../assets/Galbi.png";
+import tonkatsu from "../assets/Tonkatsu.png";
+import cornDog from "../assets/Corn_Dog.png";
+import pho from "../assets/Pho.png";
+import trufflePizza from "../assets/Truffle_Pizza.png";
+import bobaTea from "../assets/Boba_Tea.png";
 
 function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
   const [selectedFood, setSelectedFood] = useState(null);
@@ -229,6 +235,102 @@ function FoodCard({ addToCart, searchQuery = "", selectedCategory = "All" }) {
         { name: "Extra Fried Egg", price: 30 },
         { name: "Melted Cheese Layer", price: 50 },
         { name: "Roasted Nori Snack Pack", price: 35 }
+      ]
+    },
+    {
+      id: 15,
+      name: "Korean LA Galbi Beef Ribs",
+      price: 850,
+      image: galbi,
+      category: "Korean",
+      rating: 4.9,
+      prepTime: "22 min",
+      description: "Sizzling prime beef short ribs marinated in soy, garlic, and pear glaze, served with toasted sesame, chopped scallions, and fresh lettuce wraps.",
+      spiceOption: true,
+      addons: [
+        { name: "Extra Galbi Ribs", price: 250 },
+        { name: "Garlic Ssamjang Dip", price: 30 },
+        { name: "Steamed Rice Bowl", price: 40 }
+      ]
+    },
+    {
+      id: 16,
+      name: "Japanese Tonkatsu Curry",
+      price: 620,
+      image: tonkatsu,
+      category: "Pan Asian",
+      rating: 4.8,
+      prepTime: "20 min",
+      description: "Crispy panko-breaded golden cutlet served over fluffy steamed rice with rich, savory Japanese brown curry and pickled red radish.",
+      spiceOption: true,
+      addons: [
+        { name: "Extra Panko Cutlet", price: 150 },
+        { name: "Extra Curry Sauce", price: 60 },
+        { name: "Soft Boiled Ajitama Egg", price: 40 }
+      ]
+    },
+    {
+      id: 17,
+      name: "Korean Mozzarella Potato Corn Dog",
+      price: 290,
+      image: cornDog,
+      category: "Korean",
+      rating: 4.9,
+      prepTime: "12 min",
+      description: "Iconic Korean street snack filled with stretchy mozzarella cheese, encrusted with crispy diced potato cubes, topped with sugar dust, ketchup & mustard.",
+      spiceOption: true,
+      addons: [
+        { name: "Extra Cheese Pull", price: 40 },
+        { name: "Spicy Honey Mustard Drizzle", price: 20 },
+        { name: "Hot Cheeto Dust Crust", price: 35 }
+      ]
+    },
+    {
+      id: 18,
+      name: "Vietnamese Tender Beef Pho",
+      price: 590,
+      image: pho,
+      category: "Pan Asian",
+      rating: 4.8,
+      prepTime: "18 min",
+      description: "Steaming 12-hour simmered aromatic beef broth served with rice noodles, tender rare beef slices, fresh Thai basil, bean sprouts, jalapeno, and lime.",
+      spiceOption: true,
+      addons: [
+        { name: "Extra Beef Meatballs (3 pcs)", price: 80 },
+        { name: "Extra Tender Beef Slices", price: 120 },
+        { name: "Crispy Dough Sticks (Youtiao)", price: 40 }
+      ]
+    },
+    {
+      id: 19,
+      name: "Wild Truffle & Mushroom Pizza",
+      price: 920,
+      image: trufflePizza,
+      category: "Italian",
+      rating: 4.9,
+      prepTime: "22 min",
+      description: "Artisanal hand-stretched pizza layered with wild sautéed mushrooms, fresh fior di latte mozzarella, aromatic thyme, and black truffle oil.",
+      spiceOption: false,
+      addons: [
+        { name: "Extra Black Truffle Oil Drizzle", price: 80 },
+        { name: "Prosciutto Di Parma Slices", price: 140 },
+        { name: "Stuffed Cheese Crust", price: 150 }
+      ]
+    },
+    {
+      id: 20,
+      name: "Tiger Brown Sugar Boba Tea",
+      price: 260,
+      image: bobaTea,
+      category: "Beverages",
+      rating: 4.9,
+      prepTime: "5 min",
+      description: "Handcrafted fresh milk tea infused with rich caramelized brown sugar tiger stripes, chewy slow-cooked tapioca pearls, and salted cheese foam.",
+      spiceOption: false,
+      addons: [
+        { name: "Extra Tapioca Pearls", price: 30 },
+        { name: "Egg Pudding Layer", price: 40 },
+        { name: "Salted Cream Cheese Foam", price: 35 }
       ]
     }
   ];
